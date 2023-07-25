@@ -7,6 +7,7 @@ createLiElement("Professional Experience", "/ProfessionalExperience.html", ul);
 createLiElement("Other Projects", "/SignificantProjects.html", ul);
 createLiWithImage("images/github.png", "https://github.com/bckramer", ul);
 createLiWithImage("images/youtube.png", "https://www.youtube.com/user/bckramer97", ul);
+createLiWithImage("images/linkedin.png", "https://www.linkedin.com/in/benjamin-kramer-579701148/", ul);
 createLiWithImage("images/itchio_image.png", "https://liquidspace.itch.io/", ul);
 
 document.body.appendChild(ul);
