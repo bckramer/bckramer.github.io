@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-side bg-left"></div>
+    <div class="bg-side bg-right"></div>
+    <header>
+        <h1>Benjamin Kramer</h1>
+        <h3>Software Engineer</h3>
+        <h4>Over 7 years of experience developing software for</h4>
+        <h4>Fortune 500 enterprises, game studios, and venture backed start ups.</h4>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/benjamin-kramer-579701148/" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.youtube.com/@bckramer97" target="_blank">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+            <a href="https://ben-64.itch.io/" target="_blank">
+                <img src="images/itch.png" alt="itch.io">
+            </a>
+            <a href="https://github.com/bckramer" target="_blank">
+                <img src="images/github.png" alt="itch.io">
+            </a>
+            <a href="mailto:bckramer97@gmail.com" target="_blank">
+                <img src="images/email.png" alt="Email">
+            </a>
+        </div>
+        <div class="header-bottom-row">
+            <div id="trees-left" class="tree-zone"></div>
+            <nav id="main-nav">
+                <button class="nav-btn active" data-page="resume">Resume</button>
+                <button class="nav-btn" data-page="portfolio">Portfolio</button>
+            </nav>
+            <div id="trees-right" class="tree-zone"></div>
+        </div>
+        <hr>
+        
+    </header>
+
+    <main id="content">
+        <section id="resume" class="page active">
+            <iframe src="https://drive.google.com/file/d/1pDlpGC36EpFqNOAbECaYy7nydU19K1y5/preview" width="100%" height="600px" style="border: none;"></iframe>
+            
+        </section>
+
+        <section id="portfolio" class="page">
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/liquidspace.png" alt="Liquid Space thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Liquid Space Dimension</h3>
+                    <ul clas="bulleted">
+                        <li>Solo-developed Unreal Engine game released on Steam in 2023.</li>
+                        <li>Programming independently using <b>C++</b> and Blueprint.</li>
+                        <li>95% of creative assets were created myself using Blender, Paint.Net, and Unreal Engine (music by Dmytro Nebesh).</li>
+                        <li>Published under my LLC, Puppet Fox.</li>
+                        <li><a href="https://store.steampowered.com/app/2538340/Liquid_Space_Dimension/">Steam</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/midnightsuns.png" alt="MMS thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Marvel's Midnight Suns</h3>
+                    <ul clas="bulleted">
+                        <li>Triple A strategy game released in 2022.</li>
+                        <li>Contributed as a gameplay engineer to hero abilities, effects, the camera system, and more using <b>C++</b> and Unreal Engine.</li>
+                        <li><a href="https://store.steampowered.com/app/368260/Marvels_Midnight_Suns/">Steam</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/radminton.png" alt="Radminton thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Radminton, Computer Vision Coach</h3>
+                    <ul clas="bulleted">
+                        <li>Senior design project that used computer vision to track games of bdadminton.</li>
+                        <li>Contributed on a team of five, tackling object identification using <b>Python</b> and <b>JavaScript</b>.</li>
+                        <li><a href="https://www.youtube.com/watch?v=LsHkzZr4D6U">Video Demonstration</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/poker_image.jpg" alt="Pocket Aces thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Pocket Aces, the Poker Bot</h3>
+                    <ul clas="bulleted">
+                        <li>Used computer vision and a neural network to drive automated play as part of a graduate level course.</li>
+                        <li>Implemented using <b>Python</b>.</li>
+                        <li><a href="https://github.com/bckramer/PocketAces">GitHub Repo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/dynamic_pathfinding.jpg" alt="Pathfinding thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Dynamic Pathfinding using various Algorithms</h3>
+                    <ul clas="bulleted">
+                        <li>Implemented and compared various pathfinding algorithms in Unity, including LPA* (Lifelong Planning Algorithm), D* Lite, and A*</li>
+                        <li>Used <b>Unity</b> and <b>C#</b></li>
+                        <li><a href="https://youtu.be/_sNz1EXZGiQ?si=hjylboDPVC-QHiys">Video Demonstration</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/colordrop.png" alt="ColorDrop thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Color Drop</h3>
+                    <ul clas="bulleted">
+                        <li>Block-falling puzzle action game prototype developed in 2025.</li>
+                        <li>Used <b>C++</b> and Unreal Engine to create a similar game to Tetris.</li>
+                        <li><a href="https://puppetfoxllc.itch.io/color-drop">Itch.io</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/puppetfox.png" alt="Itch thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Various Itch.io Projects</h3>
+                    <ul class="bulleted">
+                        <li>Game jams, prototypes and more.</li>
+                        <li><a href="https://puppetfoxllc.itch.io/">Itch.io (Puppet Fox)</a></li>
+                        <li><a href="https://ben-64.itch.io/">Itch.io (Personal)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project-thumbnail">
+                    <img src="images/github.png" alt="GitHub thumbnail">
+                </div>
+                <div class="project-description">
+                    <h3>Various Github Projects</h3>
+                    <ul clas="bulleted">
+                        <li>Hackathons, this website, university projects and more.</li>
+                        <li><a href="https://github.com/bckramer">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const navButtons = document.querySelectorAll('.nav-btn');
+        const pages = document.querySelectorAll('.page');
+
+        navButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetPage = btn.getAttribute('data-page');
+                
+                navButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                pages.forEach(p => p.classList.remove('active'));
+                
+                setTimeout(() => {
+                    document.getElementById(targetPage).classList.add('active');
+                }, 300);
+            });
+        });
+        const colors = ['red', 'blue', 'yellow'];
+        const sides = document.querySelectorAll('.bg-side');
+        
+        function spawnBlock() {
+            sides.forEach(side => {
+                if (Math.random() > 0.6) return;
+        
+                const block = document.createElement('div');
+                block.classList.add('bg-block');
+        
+                const size = Math.random() * 60 + 30;
+                const duration = Math.random() * 6 + 10;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+        
+                block.classList.add(color);
+                block.style.width = `${size}px`
+                block.style.height = `${size}px`;
+                block.style.left = `${Math.random() * 70 + 5}%`;
+                block.style.animationDuration = `${duration}s`;
+        
+                side.appendChild(block);
+        
+                setTimeout(() => block.remove(), duration * 1000);
+            });
+        }
+        
+        setInterval(spawnBlock, 1200);
+
+        function plantTrees(containerId, count) {
+            const container = document.getElementById(containerId);
+            const colors = ['#ff4136', '#0074d9', '#ffdc00'];
+
+            const shapes = [
+                '<circle cx="20" cy="22" r="18" />', 
+                '<path d="M20 2 L38 40 L2 40 Z" />',
+                '<ellipse cx="20" cy="22" rx="12" ry="20" />'
+            ];
+
+            for (let i = 0; i < count; i++) {
+                const tree = document.createElement('div');
+                tree.className = 'tree-instance';
+
+                const size = Math.random() * 25 + 25; 
+                const pos = Math.random() * 70; // Spread 0-100% within the margined zone
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const shape = shapes[Math.floor(Math.random() * shapes.length)];
+            
+                tree.style.left = `${pos}%`;
+                tree.style.height = `${size}px`;
+                tree.style.width = `${size * 0.7}px`;
+            
+                // The 'preserveAspectRatio' and 'viewBox' ensure the trunk (rect) 
+                // stays at the very bottom edge of the SVG container.
+                tree.innerHTML = `
+                    <svg viewBox="0 0 40 60" preserveAspectRatio="xMidYMax meet" style="height:100%; width:100%;">
+                        <rect x="18" y="40" width="4" height="20" fill="#4a3728" />
+                        <g fill="${color}">${shape}</g>
+                    </svg>`;
+                
+                container.appendChild(tree);
+            }
+        }
+
+        // Plant 5-8 trees on each side
+        plantTrees('trees-left', 3);
+        plantTrees('trees-right', 3);
+    </script>
+</body>
+</html>
