@@ -6,45 +6,59 @@
     <title>Professional Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Varela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="bg-side bg-left"></div>
     <div class="bg-side bg-right"></div>
     <header>
-        <h1>Benjamin Kramer</h1>
-        <h3>Software Engineer</h3>
-        <h4>Over 7 years of experience developing software for</h4>
-        <h4>Fortune 500 enterprises, game studios, and venture backed start ups.</h4>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/benjamin-kramer-579701148/" target="_blank">
-                <img src="images/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.youtube.com/@bckramer97" target="_blank">
-                <img src="images/youtube.png" alt="YouTube">
-            </a>
-            <a href="https://ben-64.itch.io/" target="_blank">
-                <img src="images/itch.png" alt="itch.io">
-            </a>
-            <a href="https://github.com/bckramer" target="_blank">
-                <img src="images/github.png" alt="itch.io">
-            </a>
-            <a href="mailto:bckramer97@gmail.com" target="_blank">
-                <img src="images/email.png" alt="Email">
-            </a>
+    <div class="header-top-content">
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+
+        <div class="profile-container">
+            <img src="images/headshot.png" alt="Benjamin Kramer" class="profile-photo">
         </div>
-        <div class="header-bottom-row">
-            <div id="trees-left" class="tree-zone"></div>
-            <nav id="main-nav">
-                <button class="nav-btn active" data-page="resume">Resume</button>
-                <button class="nav-btn" data-page="portfolio">Portfolio</button>
-            </nav>
-            <div id="trees-right" class="tree-zone"></div>
+
+        <div class="header-info">
+            <h1>Benjamin Kramer</h1>
+            <h3>Software Engineer</h3>
+            <h4>Over 7 years of experience developing software for</h4>
+            <h4>Fortune 500 enterprises, game studios, and venture backed start ups.</h4>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/benjamin-kramer-579701148/" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/@bckramer97" target="_blank">
+                    <img src="images/youtube.png" alt="YouTube">
+                </a>
+                <a href="https://ben-64.itch.io/" target="_blank">
+                    <img src="images/itch.png" alt="itch.io">
+                </a>
+                <a href="https://github.com/bckramer" target="_blank">
+                    <img src="images/github.png" alt="GitHub">
+                </a>
+                <a href="mailto:bckramer97@gmail.com" target="_blank">
+                    <img src="images/email.png" alt="Email">
+                </a>
+            </div>
         </div>
-        <hr>
-        
-    </header>
+    </div>
+
+    <div class="header-bottom-row">
+        <div id="trees-left" class="tree-zone"></div>
+        <nav id="main-nav">
+            <button class="nav-btn active" data-page="resume">Resume</button>
+            <button class="nav-btn" data-page="portfolio">Portfolio</button>
+        </nav>
+        <div id="trees-right" class="tree-zone"></div>
+    </div>
+    <hr>
+</header>
 
     <main id="content">
         <section id="resume" class="page active">
@@ -61,7 +75,7 @@
                     <h3>Liquid Space Dimension</h3>
                     <ul clas="bulleted">
                         <li>Solo-developed Unreal Engine game released on Steam in 2023.</li>
-                        <li>Programming independently using <b>C++</b> and Blueprint.</li>
+                        <li>Programmed independently using <b>C++</b> and Blueprint.</li>
                         <li>95% of creative assets were created myself using Blender, Paint.Net, and Unreal Engine (music by Dmytro Nebesh).</li>
                         <li>Published under my LLC, Puppet Fox.</li>
                         <li><a href="https://store.steampowered.com/app/2538340/Liquid_Space_Dimension/">Steam</a></li>
@@ -162,6 +176,28 @@
     </main>
 
     <script>
+
+        // --- Theme Logic ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Check for saved user preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', ''); // Light mode
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
+
+        // --- Navigation Logic ---
         const navButtons = document.querySelectorAll('.nav-btn');
         const pages = document.querySelectorAll('.page');
 
@@ -179,6 +215,8 @@
                 }, 300);
             });
         });
+
+        // --- Block Logic ---
         const colors = ['red', 'blue', 'yellow'];
         const sides = document.querySelectorAll('.bg-side');
         
@@ -207,6 +245,7 @@
         
         setInterval(spawnBlock, 1200);
 
+        // --- Tree Logic ---
         function plantTrees(containerId, count) {
             const container = document.getElementById(containerId);
             const colors = ['#ff4136', '#0074d9', '#ffdc00'];

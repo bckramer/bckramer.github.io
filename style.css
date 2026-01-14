@@ -21,6 +21,14 @@ h1 {
     font-weight: 700;
 }
 
+h3 {
+    font-weight: normal;
+}
+
+h4 {
+    font-weight: normal;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -346,15 +354,15 @@ iframe, embed, object {
     padding: 20px 0;
 }
 
-/* Adjust the individual project card */
 .project-container {
     display: flex;
-    flex-direction: column; /* Stack image on top of text within the card */
-    background: rgba(255, 255, 255, 0.05); /* Optional: slight background to define the card */
-    border-radius: 8px;
-    padding: 15px;
-    transition: transform 0.3s ease;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes the description/links to the bottom */
+    height: 100%; 
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 .project-container:hover {
     transform: translateY(-5px);
