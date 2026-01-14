@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Varela', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background: #fff;
@@ -126,12 +126,16 @@ li:last-child {
 .project-container {
     display: flex;
     gap: 20px;
-    background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 30px 0;
     align-items: center;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
 }
 
 .project-thumbnail {
@@ -373,4 +377,115 @@ iframe, embed, object {
     height: auto;
     border-radius: 4px;
     margin-bottom: 15px;
+}
+
+/* Container for the photo and text */
+.header-top-content {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: center;
+    gap: 40px; /* Space between photo and text */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Stack on mobile */
+}
+
+/* The Profile Picture */
+.profile-photo {
+    width: 180px; /* Adjust size as needed */
+    height: 180px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover;
+    border: 3px solid #333; /* Matches your text color */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-container {
+    display: flex;
+    justify-content: flex-end; /* Pushes image toward the center gap */
+}
+
+/* Aligning text to the left of the flex container */
+.header-info {
+    text-align: left;
+}
+
+/* Ensure headings in the header-info don't have excessive margins */
+.header-info h1, .header-info h3, .header-info h4 {
+    margin: 5px 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .header-top-content {
+        text-align: center;
+        flex-direction: column;
+    }
+    .header-info {
+        text-align: center;
+    }
+}
+
+/* 1. Define Color Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --hr-color: #eeeeee;
+    --nav-btn-bg: #f5f5f5;
+    --nav-btn-active: #333333;
+    --nav-btn-active-text: #ffffff;
+    --trunk-color: #4a3728;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Define Dark Mode Overrides */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --hr-color: #333333;
+    --nav-btn-bg: #2d2d2d;
+    --nav-btn-active: #f0f0f0;
+    --nav-btn-active-text: #1a1a1a;
+    --trunk-color: #8b5a2b; /* Lighter wood for contrast */
+    --shadow: rgba(0, 0, 0, 0.5);
+    --card-bg: #2d2d2d; /* A slightly lighter gray than the body background */
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    --link-color: #64b5f6; /* A lighter, brighter blue for contrast */
+}
+
+/* 3. Update Body and Elements to use variables */
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+}
+
+hr { border: 0; border-top: 1px solid var(--hr-color); }
+
+/* 4. Style the Theme Toggle */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--nav-btn-bg);
+    border: 1px solid var(--hr-color);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px var(--shadow);
+    transition: all 0.2s ease;
+}
+
+#theme-toggle:hover { transform: scale(1.1); }
+
+/* Toggle Icon visibility */
+.icon-moon { display: none; }
+body.dark-mode .icon-sun { display: none; }
+body.dark-mode .icon-moon { display: inline; }
+
+/* 5. Ensure images/social links are visible in dark mode */
+body.dark-mode .social-links img {
+    filter: invert(1) brightness(2); /* Inverts black icons to white */
 }
