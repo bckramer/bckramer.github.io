@@ -148,9 +148,8 @@ li:last-child {
 }
 
 .project-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: auto;
 }
 
 .project-description {
@@ -164,11 +163,28 @@ li:last-child {
 @media (max-width: 600px) {
     .project-container {
         flex-direction: column;
+        padding: 0 !important; /* Forces removal of container padding */
+        align-items: stretch;
+        height: auto;
     }
 
     .project-thumbnail {
-        width: 100%;
-        height: 200px;
+        width: 100% !important;
+        height: auto !important; /* Overrides the 200px fixed height */
+        border-radius: 12px 12px 0 0;
+        display: block;
+    }
+
+    .project-thumbnail img {
+        width: 100% !important;
+        height: auto !important; /* Allows image to dictate its own height */
+        display: block; /* Removes small gap at bottom of images */
+        object-fit: contain; /* Ensures the full image is visible */
+        margin-bottom: 0;
+    }
+
+    .project-description {
+        padding: 20px;
     }
 }
 
